@@ -21,7 +21,7 @@ jobs:
         name: Set Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=vx3r/wg-gen-web
+          DOCKER_IMAGE=snakewhisper/wg-gen-web
           VERSION=edge
           if [[ $GITHUB_REF == refs/tags/* ]]; then
           VERSION=${GITHUB_REF#refs/tags/}
