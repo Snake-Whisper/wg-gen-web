@@ -14,7 +14,7 @@ build-back:
 
 build-front:
   stage: build artifacts
-  image: node:10-alpine
+  image: node:17-alpine
   script:
     - cd ./ui
     - npm install
