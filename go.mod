@@ -4,6 +4,7 @@ go 1.16
 
 require (
 	github.com/coreos/go-oidc v2.2.1+incompatible
+	github.com/coreos/go-oidc/v3 v3.1.0
 	github.com/danielkov/gin-helmet v0.0.0-20171108135313-1387e224435e
 	github.com/gin-contrib/cors v1.3.1
 	github.com/gin-contrib/static v0.0.1
@@ -18,5 +19,4 @@ require (
 	golang.zx2c4.com/wireguard/wgctrl v0.0.0-20200609130330-bd2cb7843e1b
 	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
-	gopkg.in/square/go-jose.v2 v2.5.0 // indirect
 )
