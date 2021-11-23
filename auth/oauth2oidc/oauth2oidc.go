@@ -3,7 +3,7 @@ package oauth2oidc
 import (
 	"context"
 	"fmt"
-	"github.com/coreos/go-oidc"
+	"github.com/coreos/go-oidc/v3/oidc"
 	log "github.com/sirupsen/logrus"
 	"github.com/vx3r/wg-gen-web/model"
 	"golang.org/x/oauth2"
