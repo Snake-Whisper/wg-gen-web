@@ -20,7 +20,7 @@
   "devDependencies": {
     "@vue/cli-plugin-router": "4.5.15",
     "@vue/cli-service": "4.5.15",
-    "sass": "1.43.5",
+    "sass": "1.44.0",
     "sass-loader": "10.2.0",
     "vue-cli-plugin-vuetify": "2.4.4",
     "vue-template-compiler": "2.6.14",
