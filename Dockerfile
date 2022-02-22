@@ -8,18 +8,21 @@ RUN go build -o wg-gen-web-linux -ldflags="-X 'github.com/vx3r/wg-gen-web/versio
 
 FROM node:lts-alpine AS build-front
 WORKDIR /app
-COPY ui/package*.json ./
-RUN npm install
 COPY ui/ ./
-RUN npm run build
+RUN npm install
+RUN npm run-script build
+RUN ls -al /app
 
 FROM alpine
 WORKDIR /app
+RUN adduser -S wgui
+RUN chown -R wgui /app
 COPY --from=build-back /app/wg-gen-web-linux .
 COPY --from=build-front /app/dist ./ui/dist
 COPY .env .
 RUN chmod +x ./wg-gen-web-linux
 RUN apk add --no-cache ca-certificates
+USER wgui
 EXPOSE 8080
 
 CMD ["/app/wg-gen-web-linux"]
