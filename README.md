@@ -67,6 +67,7 @@ services:
       - OAUTH2_CLIENT_ID=******************
       - OAUTH2_CLIENT_SECRET=******************
       - OAUTH2_REDIRECT_URL=https://wg-gen-web-demo.127-0-0-1.fr
+      - OAUTH2_GROUP=demogroup
     volumes:
       - /etc/wireguard:/data
   wg-json-api:
@@ -168,6 +169,7 @@ OAUTH2_PROVIDER=https://github.com
 OAUTH2_CLIENT_ID=********************
 OAUTH2_CLIENT_SECRET=********************
 OAUTH2_REDIRECT_URL=https://wg-gen-web-demo.127-0-0-1.fr
+OAUTH2_GROUP=demogroup
 ```
 
 - `google` in order to use Google as Oauth2 provider. Not yet implemented
@@ -185,6 +187,7 @@ OAUTH2_PROVIDER=https://gitlab.com
 OAUTH2_CLIENT_ID=********************
 OAUTH2_CLIENT_SECRET=********************
 OAUTH2_REDIRECT_URL=https://wg-gen-web-demo.127-0-0-1.fr
+OAUTH2_GROUP=demogroup #not implemented yet -> always returning false => login impossible
 ```
 
 Wg Gen Web will only access your profile to get email address and your name, no other unnecessary scopes will be requested.

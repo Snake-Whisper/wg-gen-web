@@ -1,10 +1,11 @@
 package fake
 
 import (
+	"time"
+
 	"github.com/vx3r/wg-gen-web/model"
 	"github.com/vx3r/wg-gen-web/util"
 	"golang.org/x/oauth2"
-	"time"
 )
 
 // Fake in order to implement interface, struct is required
@@ -13,6 +14,11 @@ type Fake struct{}
 // Setup validate provider
 func (o *Fake) Setup() error {
 	return nil
+}
+
+//Check if current user is in given group
+func (o *Fake) IsInGroup(oauth2Token *oauth2.Token, group string) (bool, error) {
+	return true, nil
 }
 
 // CodeUrl get url to redirect client for auth
@@ -41,7 +47,6 @@ func (o *Fake) UserInfo(oauth2Token *oauth2.Token) (*model.User, error) {
 		Sub:      "unknown",
 		Name:     "Unknown",
 		Email:    "unknown",
-		Profile:  "unknown",
 		Issuer:   "unknown",
 		IssuedAt: time.Time{},
 	}, nil

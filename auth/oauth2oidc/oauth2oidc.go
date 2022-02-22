@@ -3,11 +3,12 @@ package oauth2oidc
 import (
 	"context"
 	"fmt"
+	"os"
+
 	"github.com/coreos/go-oidc/v3/oidc"
 	log "github.com/sirupsen/logrus"
 	"github.com/vx3r/wg-gen-web/model"
 	"golang.org/x/oauth2"
-	"os"
 )
 
 // Oauth2idc in order to implement interface, struct is required
@@ -48,6 +49,12 @@ func (o *Oauth2idc) CodeUrl(state string) string {
 	return oauth2Config.AuthCodeURL(state)
 }
 
+//Check if current user is in given group
+func (o *Oauth2idc) IsInGroup(oauth2Token *oauth2.Token, group string) (bool, error) {
+	//TODO: Implement group check
+	return false, nil
+}
+
 // Exchange exchange code for Oauth2 token
 func (o *Oauth2idc) Exchange(code string) (*oauth2.Token, error) {
 	oauth2Token, err := oauth2Config.Exchange(context.TODO(), code)
@@ -85,7 +92,6 @@ func (o *Oauth2idc) UserInfo(oauth2Token *oauth2.Token) (*model.User, error) {
 	user := &model.User{}
 	user.Sub = userInfo.Subject
 	user.Email = userInfo.Email
-	user.Profile = userInfo.Profile
 
 	if v, found := claims["name"]; found && v != nil {
 		user.Name = v.(string)

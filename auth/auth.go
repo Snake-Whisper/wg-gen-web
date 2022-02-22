@@ -2,13 +2,14 @@ package auth
 
 import (
 	"fmt"
+	"os"
+
 	log "github.com/sirupsen/logrus"
 	"github.com/vx3r/wg-gen-web/auth/fake"
 	"github.com/vx3r/wg-gen-web/auth/github"
 	"github.com/vx3r/wg-gen-web/auth/oauth2oidc"
 	"github.com/vx3r/wg-gen-web/model"
 	"golang.org/x/oauth2"
-	"os"
 )
 
 // Auth interface to implement as auth provider
@@ -17,6 +18,7 @@ type Auth interface {
 	CodeUrl(state string) string
 	Exchange(code string) (*oauth2.Token, error)
 	UserInfo(oauth2Token *oauth2.Token) (*model.User, error)
+	IsInGroup(oauth2Token *oauth2.Token, group string) (bool, error)
 }
 
 // GetAuthProvider  get an instance of auth provider based on config

@@ -4,13 +4,14 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/vx3r/wg-gen-web/model"
-	"golang.org/x/oauth2"
-	oauth2Github "golang.org/x/oauth2/github"
 	"io/ioutil"
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/vx3r/wg-gen-web/model"
+	"golang.org/x/oauth2"
+	oauth2Github "golang.org/x/oauth2/github"
 )
 
 // Github in order to implement interface, struct is required
@@ -26,11 +27,34 @@ func (o *Github) Setup() error {
 		ClientID:     os.Getenv("OAUTH2_CLIENT_ID"),
 		ClientSecret: os.Getenv("OAUTH2_CLIENT_SECRET"),
 		RedirectURL:  os.Getenv("OAUTH2_REDIRECT_URL"),
-		Scopes:       []string{"user"},
+		Scopes:       []string{"read:user", "user:email", "read:org"},
 		Endpoint:     oauth2Github.Endpoint,
 	}
 
 	return nil
+}
+
+//Check if current user is in given group
+func (o *Github) IsInGroup(oauth2Token *oauth2.Token, group string) (bool, error) {
+	// we have the token, lets get user information
+	user, err := o.UserInfo(oauth2Token)
+	if err != nil {
+		return false, err
+	}
+	url := fmt.Sprintf("https://api.github.com/orgs/%s/members/%s", group, user.Name)
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		return false, err
+	}
+
+	req.Header.Set("Authorization", fmt.Sprintf("token %s", oauth2Token.AccessToken))
+	client := &http.Client{}
+	resp, err := client.Do(req)
+
+	if err == nil && resp.StatusCode == 204 {
+		return true, nil
+	}
+	return false, err
 }
 
 // CodeUrl get url to redirect client for auth
@@ -84,14 +108,11 @@ func (o *Github) UserInfo(oauth2Token *oauth2.Token) (*model.User, error) {
 	// get some infos about user
 	user := &model.User{}
 
-	if val, ok := data["name"]; ok && val != nil {
+	if val, ok := data["login"]; ok && val != nil {
 		user.Name = val.(string)
 	}
 	if val, ok := data["email"]; ok && val != nil {
 		user.Email = val.(string)
-	}
-	if val, ok := data["html_url"]; ok && val != nil {
-		user.Profile = val.(string)
 	}
 
 	// openid specific

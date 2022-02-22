@@ -2,7 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/danielkov/gin-helmet"
+	"net/http"
+	"os"
+	"path/filepath"
+	"strings"
+	"time"
+
+	helmet "github.com/danielkov/gin-helmet"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
@@ -15,11 +21,6 @@ import (
 	"github.com/vx3r/wg-gen-web/util"
 	"github.com/vx3r/wg-gen-web/version"
 	"golang.org/x/oauth2"
-	"net/http"
-	"os"
-	"path/filepath"
-	"strings"
-	"time"
 )
 
 var (
