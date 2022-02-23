@@ -20,9 +20,12 @@ RUN chown -R wgui /app
 COPY --from=build-back /app/wg-gen-web-linux .
 COPY --from=build-front /app/dist ./ui/dist
 COPY .env .
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 RUN chmod +x ./wg-gen-web-linux
-RUN apk add --no-cache ca-certificates
-USER wgui
+RUN apk add --no-cache ca-certificates sudo
 EXPOSE 8080
 
-CMD ["/app/wg-gen-web-linux"]
+
+CMD ["/entrypoint.sh"]
+
