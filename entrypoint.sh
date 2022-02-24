@@ -19,6 +19,6 @@ else
     echo Please add volume to /ui to access ui bundle
 fi
 
-[[ -z "${DEPLOY_ENV}" ]] || chown wgui $WG_CONF_DIR
+[[ -z "${WG_CONF_DIR}" ]] || chown wgui $WG_CONF_DIR
 
 sudo -Eu wgui /app/wg-gen-web-linux
