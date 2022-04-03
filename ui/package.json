@@ -7,7 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "axios": "0.26.0",
+    "axios": "0.26.1",
     "is-cidr": "4.0.2",
     "moment": "2.29.1",
     "vue": "2.6.14",
