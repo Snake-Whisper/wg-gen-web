@@ -4,6 +4,7 @@ FROM golang:alpine AS build-back
 WORKDIR /app
 ARG COMMIT
 COPY . .
+RUN apk add git
 RUN go build -o wg-gen-web-linux -ldflags="-X 'github.com/vx3r/wg-gen-web/version.Version=${COMMIT}'" github.com/vx3r/wg-gen-web/cmd/wg-gen-web
 
 FROM node:lts-alpine AS build-front
