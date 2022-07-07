@@ -9,7 +9,7 @@
   "dependencies": {
     "axios": "0.27.2",
     "is-cidr": "4.0.2",
-    "moment": "2.29.3",
+    "moment": "2.29.4",
     "vue": "2.7.3",
     "vue-axios": "3.4.1",
     "vue-moment": "4.1.0",
