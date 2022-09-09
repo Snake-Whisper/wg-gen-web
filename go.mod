@@ -3,7 +3,7 @@ module github.com/vx3r/wg-gen-web
 go 1.19
 
 require (
-	github.com/coreos/go-oidc/v3 v3.3.0
+	github.com/coreos/go-oidc/v3 v3.4.0
 	github.com/danielkov/gin-helmet v0.0.0-20171108135313-1387e224435e
 	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-contrib/static v0.0.1
