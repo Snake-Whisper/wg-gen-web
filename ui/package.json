@@ -14,7 +14,7 @@
     "vue-axios": "3.4.1",
     "vue-moment": "4.1.0",
     "vue-router": "3.6.5",
-    "vuetify": "2.6.9",
+    "vuetify": "2.6.10",
     "vuex": "3.6.2"
   },
   "devDependencies": {
