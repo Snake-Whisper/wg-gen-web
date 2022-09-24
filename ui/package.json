@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "axios": "0.27.2",
-    "is-cidr": "4.0.2",
+    "is-cidr": "5.0.2",
     "moment": "2.29.4",
     "vue": "2.7.10",
     "vue-axios": "3.4.1",
