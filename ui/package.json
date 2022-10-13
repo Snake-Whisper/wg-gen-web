@@ -10,7 +10,7 @@
     "axios": "1.1.2",
     "is-cidr": "5.0.2",
     "moment": "2.29.4",
-    "vue": "2.7.10",
+    "vue": "2.7.12",
     "vue-axios": "3.4.1",
     "vue-moment": "4.1.0",
     "vue-router": "3.6.5",
@@ -23,7 +23,7 @@
     "sass": "1.55.0",
     "sass-loader": "10.3.1",
     "vue-cli-plugin-vuetify": "2.5.8",
-    "vue-template-compiler": "2.7.10",
+    "vue-template-compiler": "2.7.12",
     "vuetify-loader": "1.9.2"
   }
 }
