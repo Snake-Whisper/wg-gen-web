@@ -11,7 +11,7 @@
     "is-cidr": "5.0.2",
     "moment": "2.29.4",
     "vue": "2.7.13",
-    "vue-axios": "3.4.1",
+    "vue-axios": "3.5.2",
     "vue-moment": "4.1.0",
     "vue-router": "3.6.5",
     "vuetify": "2.6.12",
