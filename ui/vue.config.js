@@ -3,6 +3,11 @@ module.exports = {
     port: 8081,
     disableHostCheck: true,
   },
+  configureWebpack: {
+    output: {
+      hashFunction: "xxhash64"
+    }
+  },
   transpileDependencies: [
     "vuetify"
   ],
