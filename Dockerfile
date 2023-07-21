@@ -7,7 +7,7 @@ COPY . .
 RUN apk add git
 RUN go build -o wg-gen-web-linux -ldflags="-X 'github.com/vx3r/wg-gen-web/version.Version=${COMMIT}'" github.com/vx3r/wg-gen-web/cmd/wg-gen-web
 
-FROM node:20.4.0-alpine AS build-front
+FROM node:20.5.0-alpine AS build-front
 WORKDIR /app
 COPY ui/ ./
 RUN npm install
