@@ -82,6 +82,8 @@ github.com/coreos/go-oidc v2.2.1+incompatible h1:mh48q/BqXqgjVHpy2ZY7WnWAbenxRjs
 github.com/coreos/go-oidc v2.2.1+incompatible/go.mod h1:CgnwVTmzoESiwO9qyAFEMiHoZ1nMCKZlZ9V6mm3/LKc=
 github.com/coreos/go-oidc v2.3.0+incompatible h1:+5vEsrgprdLjjQ9FzIKAzQz1wwPD+83hQRfUIPh7rO0=
 github.com/coreos/go-oidc v2.3.0+incompatible/go.mod h1:CgnwVTmzoESiwO9qyAFEMiHoZ1nMCKZlZ9V6mm3/LKc=
+github.com/coreos/go-oidc v2.4.0+incompatible h1:xjdlhLWXcINyUJgLQ9I76g7osgC2goiL6JDXS6Fegjk=
+github.com/coreos/go-oidc v2.4.0+incompatible/go.mod h1:CgnwVTmzoESiwO9qyAFEMiHoZ1nMCKZlZ9V6mm3/LKc=
 github.com/coreos/go-oidc/v3 v3.6.0 h1:AKVxfYw1Gmkn/w96z0DbT/B/xFnzTd3MkZvWLjF4n/o=
 github.com/coreos/go-oidc/v3 v3.6.0/go.mod h1:ZpHUsHBucTUj6WOkrP4E20UPynbLZzhTQ1XKCXkxyPc=
 github.com/coreos/go-oidc/v3 v3.7.0 h1:FTdj0uexT4diYIPlF4yoFVI5MRO1r5+SEcIpEw9vC0o=
