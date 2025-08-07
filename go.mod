@@ -7,7 +7,7 @@ toolchain go1.24.5
 require (
 	github.com/coreos/go-oidc v2.4.0+incompatible
 	github.com/coreos/go-oidc/v3 v3.15.0
-	github.com/danielkov/gin-helmet v0.0.0-20171108135313-1387e224435e
+	github.com/danielkov/gin-helmet v1.0.2
 	github.com/gin-contrib/cors v1.7.6
 	github.com/gin-contrib/static v1.1.5
 	github.com/gin-gonic/gin v1.10.1
@@ -28,6 +28,8 @@ require (
 	github.com/chenzhuoyu/iasm v0.9.1 // indirect
 	github.com/cloudwego/base64x v0.1.5 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect
+	github.com/danielkov/gin-helmet/core v1.0.0 // indirect
+	github.com/danielkov/gin-helmet/ginhelmet v1.0.0 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.9 // indirect
 	github.com/gin-contrib/sse v1.1.0 // indirect
 	github.com/go-jose/go-jose/v3 v3.0.1 // indirect
