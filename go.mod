@@ -6,7 +6,7 @@ toolchain go1.26.4
 
 require (
 	github.com/coreos/go-oidc v2.5.0+incompatible
-	github.com/coreos/go-oidc/v3 v3.18.0
+	github.com/coreos/go-oidc/v3 v3.19.0
 	github.com/danielkov/gin-helmet v1.0.2
 	github.com/gin-contrib/cors v1.7.7
 	github.com/gin-contrib/static v1.1.6
