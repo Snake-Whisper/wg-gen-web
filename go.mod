@@ -2,7 +2,7 @@ module github.com/vx3r/wg-gen-web
 
 go 1.25.0
 
-toolchain go1.26.6
+toolchain go1.27.0
 
 require (
 	github.com/coreos/go-oidc v2.5.0+incompatible
