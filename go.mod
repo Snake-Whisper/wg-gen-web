@@ -9,7 +9,7 @@ require (
 	github.com/coreos/go-oidc/v3 v3.21.0
 	github.com/danielkov/gin-helmet v1.0.2
 	github.com/gin-contrib/cors v1.7.8
-	github.com/gin-contrib/static v1.1.7
+	github.com/gin-contrib/static v1.1.8
 	github.com/gin-gonic/gin v1.12.0
 	github.com/joho/godotenv v1.5.1
 	github.com/patrickmn/go-cache v2.1.0+incompatible
@@ -57,7 +57,7 @@ require (
 	go.mongodb.org/mongo-driver/v2 v2.8.0 // indirect
 	go.uber.org/mock v0.6.0 // indirect
 	golang.org/x/arch v0.29.0 // indirect
-	golang.org/x/crypto v0.55.0 // indirect
+	golang.org/x/crypto v0.56.0 // indirect
 	golang.org/x/mod v0.38.0 // indirect
 	golang.org/x/net v0.57.0 // indirect
 	golang.org/x/sync v0.22.0 // indirect
